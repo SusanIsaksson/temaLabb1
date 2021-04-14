@@ -5,11 +5,6 @@
 	<meta charset="UTF-8" />
 	<title>Labb 1</title>
 	
-	
-
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css'; ?>">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap.css'; ?>">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/font-awesome.css'; ?>">
 <?php 
 wp_head();
 ?>
