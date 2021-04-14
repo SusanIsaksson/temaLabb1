@@ -35,6 +35,9 @@ get_header();
                                 the_content();
                                 ?></p>
 							</article>
+							<?php
+                            } //avsluta loopen
+                        	?>
 							
 							<nav class="navigation pagination">
 								<h2 class="screen-reader-text">Inläggsnavigering</h2>
@@ -45,9 +48,7 @@ get_header();
 							</nav>
 						</div>
 
-                        <?php
-                            } //avsluta loopen
-                        ?>
+                        
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<div id="sidebar">
 								<ul>
