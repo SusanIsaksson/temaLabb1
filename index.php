@@ -8,6 +8,8 @@ get_header();
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="hero">
+							banan
+
 							<?php 
 								while(have_posts()) {  //starta loopen 
 									the_post();
@@ -20,7 +22,6 @@ get_header();
 									<p><?php
 										the_content();
 									?></p>
-									</a>
 								</div>
 							</div>
 							<?php
@@ -31,10 +32,6 @@ get_header();
 				</div>
 			</section>
 		</main>
-
-		
-
-	</div>
 
 
 	

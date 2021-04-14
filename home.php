@@ -16,7 +16,7 @@ get_header();
 							?>
 								<img src="<?php the_post_thumbnail_url(); ?> "alt="en bild"> 
 								<h2 class="title">
-									<a href="inlagg.html">
+									<a href="<?php the_permalink(); ?>"></a>
                                     <?php
                                     the_title();
                                     ?>

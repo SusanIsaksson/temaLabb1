@@ -18,12 +18,13 @@ function sidebar_meny() {
 add_action('wp_enqueue_script', 'styleCss');
 
 function styleCss() {
-    wp_enqueue_style('temastil', get_template_directory_uri() .'/css/style.css');
-    wp_enqueue_style('temastil', get_template_directory_uri() .'/css/bootstrap.css');
-    wp_enqueue_style('temastil', get_template_directory_uri() .'/css/font-awesome.css');
+    wp_enqueue_style('temastil', get_template_directory_uri() .'style.css');
+    wp_enqueue_style('temastil', get_template_directory_uri() .'bootstrap.css');
+    wp_enqueue_style('temastil', get_template_directory_uri() .'font-awesome.css');
 
 
 }
+
 
 
 ?>
