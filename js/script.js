@@ -13,6 +13,4 @@
 		$('.mobile-search').slideToggle();
 	});
 
-})
-
-// ($jQuery);
+}) ($jQuery);
