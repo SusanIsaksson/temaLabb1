@@ -14,11 +14,12 @@ get_header();
 								while(have_posts()) {  //starta loopen 
 									the_post();
 							?>
+							
 								<img src="<?php the_post_thumbnail_url(); ?> "alt="en bild"> 
 								<h2 class="title">
-									<a href="<?php the_permalink(); ?>"></a>
+								<a href="<?php the_permalink(); ?>"></a>
                                     <?php
-                                    the_title();
+                                    the_title(); 
                                     ?>
 								<ul class="meta">
 									<li>
@@ -32,14 +33,15 @@ get_header();
 									</li>
 								</ul>
 								<p> <?php
-                                the_content();
+                                the_excerpt();
                                 ?></p>
 							</article>
 							<?php
                             } //avsluta loopen
                         	?>
-							
+											
 							<nav class="navigation pagination">
+								
 								<h2 class="screen-reader-text">Inläggsnavigering</h2>
 								<a class="prev page-numbers" href="">Föregående</a>
 								<span class="page-numbers current">1</span>
