@@ -19,27 +19,18 @@ get_header();
 										the_content();
 									?></p>
 								</div>
-							</div>
+						</div>
 							<?php
 							} //avsluta loopen
 							?>
-						</div>
+						
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<ul class="side-menu">
-								<li>
-									<a href="undersida.html">Undersida</a>
-								</li>
-								<li>
-									<a href="undersida2.html">Undersida 2</a>
-								</li>
-								<li>
-									<a href="undersida3.html">Undersida 3</a>
-								</li>
-								<li>
-									<a href="undersida4.html">Undersida 4</a>
-								</li>
+								<?php //hämtar info från widget "meny på undersida"
+									dynamic_sidebar('menyundersida');
+								?>
 							</ul>
-						</aside>
+							
 					</div>
 				</div>
 			</section>

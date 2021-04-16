@@ -23,17 +23,18 @@ get_header();
                                     ?>
 								<ul class="meta">
 									<li>
-										<i class="fa fa-calendar"></i> 
+										<i class="fa fa-calendar"><?php the_date(); ?></i> 
 									</li>
 									<li>
-										<i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
+										<i class="fa fa-user"></i> <a href="forfattare.html"><?php the_author(); ?> </a>
 									</li>
 									<li>
-										<i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>
+										<i class="fa fa-tag"><?php the_category('<a>, ');  ?></i> 
+										
 									</li>
 								</ul>
 								<p> <?php
-                                the_excerpt();
+                                the_excerpt(); //tar in innehållet i inlägget men visar bara en del
                                 ?></p>
 							</article>
 							<?php
@@ -56,17 +57,21 @@ get_header();
 								<ul>
 									<li>
 										<form id="searchform" class="searchform">
-											<div>
-												<label class="screen-reader-text">Sök efter:</label>
-												<input type="text" />
-												<input type="submit" value="Sök" />
-											</div>
+											
+											<?php //hämtar insök-efter-ruta
+											get_search_form();
+											
+											?>
 										</form>
 									</li>
 								</ul>
 								<ul role="navigation">
 									<li class="pagenav">
-										<h2>Sidor</h2>
+									<?php //hämtar info från widget "meny på undersida"
+									dynamic_sidebar('menysidor');
+								?>
+									
+										<!-- <h2>Sidor</h2>
 										<ul>
 											<li class="page_item current_page_item">
 												<a href="">Blogg</a>
@@ -97,14 +102,17 @@ get_header();
 												<a href="">Startsida</a>
 											</li>
 										</ul>
-									</li>
+									</li> -->
 									<li>
-										<h2>Arkiv</h2>
+										<?php //hämtar info från widget "meny på undersida"
+										dynamic_sidebar('menysidor');
+										?>
+										<!-- <h2>Arkiv</h2>
 										<ul>
 											<li>
 												<a href="arkiv.html">oktober 2016</a>
 											</li>
-										</ul>
+										</ul> -->
 									</li>
 									<li class="categories">
 										<h2>Kategorier</h2>

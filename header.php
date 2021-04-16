@@ -18,11 +18,15 @@ wp_head();
 				<div class="row">
                 
 					<div class="col-xs-8 col-sm-6">
-						<a class="logo" href="index.html">Labb 1</a>
+						<a class="logo" href="index.php">
+						<?php //hämtar in texten Labb 1
+						dynamic_sidebar('logo');
+						?>
+						</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
 						<form id="searchform" class="searchform">
-					<?php
+					<?php //Sök rutan i headern
 						get_search_form();
 					?>
 					</form>
@@ -40,9 +44,10 @@ wp_head();
 		<div class="mobile-search">
 			<form id="searchform" class="searchform">
 				<div>
-					<label class="screen-reader-text">Sök efter:</label>
-					<input type="text" />
-					<input type="submit" value="Sök" />
+					<?php //Sök rutan i headern
+						get_search_form();
+					?>
+					
 				</div>
 			</form>
 		</div>
