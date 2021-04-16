@@ -7,14 +7,13 @@
 						?>
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1"> 
-						<?php //SKA hämta info från widget "kontaktInfo"
+						<?php //hämtar info från widget "kontaktInfo"
 						dynamic_sidebar('kontaktinfo');
-						
 						?> 
 						
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
-						<?php
+						<?php //hämtar info från widget "socialmedia"
 						dynamic_sidebar('socialmedia');
 						?>
 						
