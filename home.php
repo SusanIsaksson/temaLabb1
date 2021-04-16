@@ -8,46 +8,46 @@ get_header();
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
 							<h1>Blogg</h1>
-							<article>
-
-                            <?php 
+							<?php 
 								while(have_posts()) {  //starta loopen 
 									the_post();
 							?>
-							
-								<img src="<?php the_post_thumbnail_url(); ?> "alt="en bild"> 
+							<article>
+			
+								<img src="<?php the_post_thumbnail_url(); // hämtar bild?> "alt="en bild"> 
 								<h2 class="title">
 								<a href="<?php the_permalink(); ?>"></a>
-                                    <?php
+                                    <?php //hämtar titel på inlägg
                                     the_title(); 
                                     ?>
 								<ul class="meta">
 									<li>
-										<i class="fa fa-calendar"><?php the_date(); ?></i> 
+										<i class="fa fa-calendar"><?php the_date(); //hämtar datum för inlägget ?></i> 
 									</li>
 									<li>
-										<i class="fa fa-user"></i> <a href="forfattare.html"><?php the_author(); ?> </a>
+										<i class="fa fa-user"></i> <a href="author.php"><?php the_author(); //hämtar författare?> </a>
 									</li>
 									<li>
-										<i class="fa fa-tag"><?php the_category('<a>, ');  ?></i> 
+										<i class="fa fa-tag"><?php the_category('<a>, '); //hämtar kategori  ?></i> 
 										
 									</li>
 								</ul>
-								<p> <?php
-                                the_excerpt(); //tar in innehållet i inlägget men visar bara en del
-                                ?></p>
+									<?php
+                                		the_excerpt(); //tar in innehållet i inlägget men visar bara en del
+                                	?>
+							
+								
 							</article>
 							<?php
                             } //avsluta loopen
                         	?>
 											
 							<nav class="navigation pagination">
+								<?php //lägger till navigering på flera sidor
+									The_posts_pagination();
+								?>
 								
-								<h2 class="screen-reader-text">Inläggsnavigering</h2>
-								<a class="prev page-numbers" href="">Föregående</a>
-								<span class="page-numbers current">1</span>
-								<a class="page-numbers" href="">2</a>
-								<a class="next page-numbers" href="">Nästa</a>
+								
 							</nav>
 						</div>
 
@@ -58,20 +58,20 @@ get_header();
 									<li>
 										<form id="searchform" class="searchform">
 											
-											<?php //hämtar insök-efter-ruta
+											<?php //hämtar in sök-efter-ruta
 											get_search_form();
 											
+											?>
+											<?php
+											dynamic_sidebar('menysidor');
 											?>
 										</form>
 									</li>
 								</ul>
+								<!-- Efter att det krånglat och denna meny placerades och ersatte huvudmenyn i header, gav jag upp och hårdkodade. -->
 								<ul role="navigation">
 									<li class="pagenav">
-									<?php //hämtar info från widget "meny på undersida"
-									dynamic_sidebar('menysidor');
-								?>
-									
-										<!-- <h2>Sidor</h2>
+										<h2>Sidor</h2>
 										<ul>
 											<li class="page_item current_page_item">
 												<a href="">Blogg</a>
@@ -102,17 +102,14 @@ get_header();
 												<a href="">Startsida</a>
 											</li>
 										</ul>
-									</li> -->
+									</li>
 									<li>
-										<?php //hämtar info från widget "meny på undersida"
-										dynamic_sidebar('menysidor');
-										?>
-										<!-- <h2>Arkiv</h2>
+										<h2>Arkiv</h2>
 										<ul>
 											<li>
 												<a href="arkiv.html">oktober 2016</a>
 											</li>
-										</ul> -->
+										</ul>
 									</li>
 									<li class="categories">
 										<h2>Kategorier</h2>
@@ -126,6 +123,9 @@ get_header();
 										</ul>
 									</li>
 								</ul>
+								
+								
+									
 							</div>
 						</aside>
 					</div>

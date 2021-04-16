@@ -5,6 +5,7 @@ add_theme_support('widgets');
 
 
 
+
 add_action('after_setup_theme', 'footer_meny');
 
 function footer_meny() {
@@ -18,6 +19,7 @@ function sidebar_meny() {
     register_nav_menu('sidebarid', 'Meny i sidebar');
 }
 
+// widget för logo namnet Labb 1 i header
 register_sidebar(
     [
         'name' => 'Logo namn',
@@ -27,6 +29,7 @@ register_sidebar(
     ]
 );
 
+//widget för meny Sidor på home.php
 register_sidebar(
     [
         'name' => 'Meny Blogg Sidor',
@@ -36,6 +39,34 @@ register_sidebar(
     ]
 );
 
+//widget för meny Arkiv på home.php
+register_sidebar(
+    [
+        'name' => 'Meny Blogg Arkiv',
+        'description' => 'meny med sidor',
+        'id' => 'menyarkiv',
+        'before_widget' => '',
+        'after_widget' => ''
+    ]
+);
+
+//widget för meny Kategorier på home.php
+register_sidebar(
+    [
+        'name' => 'Meny Blogg Kategorier',
+        'description' => 'meny med sidor',
+        'id' => 'menykategorier',
+        'before_widget' => '',
+        'after_widget' => ''
+    ]
+);
+
+
+
+
+
+
+//widget för footer.php och kort-om-oss
 register_sidebar(
     [
         'name' => 'Kort om oss',
@@ -45,6 +76,7 @@ register_sidebar(
     ]
     );
 
+//widget för footer.php - kontaktuppgifter
 register_sidebar(
     [
         'name' => 'Kontaktuppgifter',
@@ -54,6 +86,7 @@ register_sidebar(
     ]
     );
 
+//widget för footer.php - sociala medier
 register_sidebar(
         [
             'name' => 'Social Media',
@@ -63,14 +96,6 @@ register_sidebar(
         ]
         );
 
-register_sidebar(
-    [
-        'name' => 'Kontaktformulär',
-        'description' => 'Formulär med namn, epost, meddelande och skicka-knapp',
-        'id' => 'kontaktForm',
-        'before_widget' => ''
-    ]
-    );
 
 //sidbar/meny för undersida
 register_sidebar(

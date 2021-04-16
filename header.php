@@ -35,6 +35,9 @@ wp_head();
 						<div class="mobile-menu-wrap">
 							<i class="fa fa-search"></i>
 							<i class="fa fa-bars menu-icon"></i>
+							<?php //hämtar in texten Labb 1
+							dynamic_sidebar('logo');
+							?>
 						</div>
 					</div>
 				</div>
@@ -59,7 +62,7 @@ wp_head();
 						<ul class="menu">
 							<li class="current-menu-item">
 
-                            <?php
+                            <?php //meny-listen i header
                             wp_nav_menu(
                                 [ 
                                     'container' => 'nav'
@@ -72,3 +75,5 @@ wp_head();
 				</div>
 			</div>
 		</nav>
+
+		

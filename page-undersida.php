@@ -12,10 +12,10 @@ get_header();
 									the_post();
 						    ?>
 								<div class="text">
-									<h1><?php
+									<h1><?php //hämtar titel
 										the_title();
 									?></h1>
-									<p><?php
+									<p><?php //hämtar innehåll
 										the_content();
 									?></p>
 								</div>

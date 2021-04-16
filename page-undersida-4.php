@@ -9,18 +9,18 @@ get_header();
 
                             <?php   
 							    while(have_posts()) {  //starta loopen 
-									the_post();
+									the_post(); 
 						    ?>
-								<h1><?php
+								<h1><?php //hämtar titel
 									the_title();
 								?></h1>
-								<p><?php
+								<p><?php //hämtar innehållet
 									the_content();
 								?></p>
 							
 						</div>
                         <div class="col-xs-12 col-sm-4 col-md-6">
-                        <img src="<?php the_post_thumbnail_url(); ?> "alt="en bild"> 
+                        <img src="<?php the_post_thumbnail_url(); //hämtar bild ?> "alt="en bild"> 
                         </div>
 						
                         <?php

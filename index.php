@@ -13,12 +13,12 @@ get_header();
 								while(have_posts()) {  //starta loopen 
 									the_post();
 							?>
-								<img src="<?php the_post_thumbnail_url(); ?> "alt="en bild"> 
+								<img src="<?php the_post_thumbnail_url(); // hämtar in bild?> "alt="en bild"> 
 								<div class="text">
-									<h1><?php
+									<h1><?php //hämtar titel
 										the_title();
 									?></h1>
-									<p><?php
+									<p><?php //hämtar sidinnehåll
 										the_content();
 									?></p>
 								</div>
@@ -37,3 +37,5 @@ get_header();
 <?php 
 get_footer();
 ?>
+
+
